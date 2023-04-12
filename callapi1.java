@@ -1,6 +1,5 @@
 package com.apicall;
 
-//public class callapi1 {
 
 
 import org.json.simple.JSONArray;
@@ -11,23 +10,12 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Scanner;
 
-//public class Main {
 public class callapi1 {
     public static void main(String[] args) {
 
-        /*
-        Maven dependency for JSON-simple:
-            <dependency>
-                <groupId>com.googlecode.json-simple</groupId>
-                <artifactId>json-simple</artifactId>
-                <version>1.1.1</version>
-            </dependency>
-         */
-
+     
         try {
-            //Public API:
-            //https://www.metaweather.com/api/location/search/?query=<CITY>
-            //https://www.metaweather.com/api/location/44418/
+            
 
             URL url = new URL("https://api.chucknorris.io/jokes/random");
 
@@ -35,10 +23,10 @@ public class callapi1 {
             conn.setRequestMethod("GET");
             conn.connect();
 
-            //Check if connect is made
+           
             int responseCode = conn.getResponseCode();
 
-            // 200 OK
+            
             if (responseCode != 200) {
                 throw new RuntimeException("HttpResponseCode: " + responseCode);
             } else {
@@ -49,7 +37,7 @@ public class callapi1 {
                 while (scanner.hasNext()) {
                     informationString.append(scanner.nextLine());
                 }
-                //Close the scanner
+               
                 scanner.close();
 
                 System.out.println(informationString);
