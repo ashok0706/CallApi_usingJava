@@ -27,7 +27,7 @@ public class CallApi {
         try {
           
 
-            URL url = new URL(" https://api.zippopotam.us/us/33162");
+            URL url = new URL(" https://api.nationalize.io/?name=nathaniel");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
